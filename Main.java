@@ -12,7 +12,7 @@ public class Main {
    * Code from text's Example 11.2
    */
   private static void readMovies() {
-    try (Scanner file = new Scanner(new File("movies.txt"))) {
+    try (Scanner file = new Scanner(new FileInputStream("movies.txt"))) {
       while (file.hasNext()) // test for the end of the file
       {
         String movieTitle = file.nextLine();
@@ -71,7 +71,7 @@ public class Main {
     List<FlightRecord> listFlightRecords = new ArrayList<>();
 
     try {
-      Scanner file = new Scanner(new File("flights.txt"));
+      Scanner file = new Scanner(new FileInputStream("flights.txt"));
 
       while (file.hasNext()) // test for the end of the file
       {
